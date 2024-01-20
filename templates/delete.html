@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h4>are you sure you want to delete</h4>
+<h3>Task: {{ item.name }}</h3>
+<h3>Priority: {{ item.priority }}</h3>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">confirm</button>
+</form>
+{% endblock content %}
+
